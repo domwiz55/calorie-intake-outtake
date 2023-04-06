@@ -1,0 +1,18 @@
+# Get user input
+name = input("What is your name? ")
+age = int(input("What is your age? "))
+height = float(input("What is your height in meters? "))
+weight = float(input("What is your weight in kilograms? "))
+calories = int(input("How many calories do you eat per day? "))
+
+# Calculate BMI and recommended calorie intake
+bmi = weight / height**2
+recommended_calories = calories * 1.2 if age < 30 else calories * 1.1
+
+# Output results
+print("Name:", name)
+print("Age:", age)
+print("Height:", height, "m")
+print("Weight:", weight, "kg")
+print("BMI:", round(bmi, 1))
+print("Recommended Daily Calorie Intake:", int(recommended_calories), "cal")
